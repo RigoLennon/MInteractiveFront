@@ -11,12 +11,13 @@ function App() {
       <Grid
         container
         direction="column"
-        justify="flex-start"
+        justify="center"
         alignItems="center"
         >
-          <h1>Hola mundo2</h1>
+          <h1>Bienvenido al menú interactivo</h1>
+          <p>Para comenzar escanea el codigo QR de tu restaurante</p>
           <ScanButton />
-        </Grid>
+      </Grid>
     </div>
   );
 }
