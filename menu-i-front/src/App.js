@@ -1,23 +1,31 @@
 import React from 'react';
-import { Container,Grid } from '@material-ui/core';
+import { Switch, Route, Link } from "react-router-dom";
 
+import Home from './components/Home';
+import About from './components/About';
 import AppBarD from './components/AppBar';
-import ScanButton from './components/ScanButton';
+import MainPage from './components/MainPage';
 
 function App() {
   return (
     <div className="App">
       <AppBarD />
-      <Grid
-        container
-        direction="column"
-        justify="center"
-        alignItems="center"
-        >
-          <h1>Bienvenido al menú interactivo</h1>
-          <p>Para comenzar escanea el codigo QR de tu restaurante</p>
-          <ScanButton />
-      </Grid>
+      <main>
+        <Switch>
+          <Route path="/" component={MainPage} exact />
+          <Route path="/about" component={About} />
+          <Route path="/Home" component={Home} />
+          <Route component={Error} />
+        </Switch>
+        
+        <div>
+          <Link to="/">Main Page </Link>
+          <br></br>
+          <Link to="/home">Home </Link>
+          <br></br>
+          <Link to="/about">About Us </Link>
+        </div>
+      </main>
     </div>
   );
 }
