@@ -5,8 +5,24 @@ import Home from './components/Home';
 import About from './components/About';
 import AppBarD from './components/AppBar';
 import MainPage from './components/MainPage';
+import ListProducts from './components/ListProducts';
 
-function App() {
+const styles = {
+  bigIconArea: {
+    width: "10em",
+    height: "10em"
+  },
+  bigIcon: {
+    width: "5em",
+    height: "5em"
+  },
+  text:{
+    textAlign: "center",
+    padding: "1px"
+  }
+};
+
+export default function App() {
   return (
     <div className="App">
       <AppBarD />
@@ -15,19 +31,11 @@ function App() {
           <Route path="/" component={MainPage} exact />
           <Route path="/about" component={About} />
           <Route path="/Home" component={Home} />
+          <Route path="/list-product" component={ListProducts} />
           <Route component={Error} />
         </Switch>
-        
-        <div>
-          <Link to="/">Main Page </Link>
-          <br></br>
-          <Link to="/home">Home </Link>
-          <br></br>
-          <Link to="/about">About Us </Link>
-        </div>
       </main>
     </div>
   );
 }
 
-export default App;
