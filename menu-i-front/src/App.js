@@ -7,6 +7,7 @@ import AppBarD from './components/AppBar';
 import MainPage from './components/MainPage';
 import ListProducts from './components/ListProducts';
 import Tester from './components/Test';
+import DetailProduct from './components/DetailProduct';
 
 const styles = {
   bigIconArea: {
@@ -33,7 +34,7 @@ export default function App() {
           <Route path="/about" component={About} />
           <Route path="/Home" component={Home} />
           <Route path="/list-product" component={ListProducts} />
-          <Route path="/tester" component={Tester} />
+          <Route path="/detail-product" component={DetailProduct} />
           <Route component={Error} />
         </Switch>
       </main>

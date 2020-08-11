@@ -7,10 +7,10 @@ import {
   CardContent,
   Typography
 } from '@material-ui/core';
-import { red } from '@material-ui/core/colors';
+import { Link } from "react-router-dom";
 import test from '../images/test.png';
 
-  export default class Tester extends React.Component {
+  export default class ListProduct extends React.Component {
 
     constructor() {
        super();
@@ -65,17 +65,19 @@ import test from '../images/test.png';
                       subheader="Italian Pizza"
                       /*key={name}*/
                     />
-
-                      <CardMedia
-                        style= {media} 
-                        image={test}
-                        title='h'
-                      />
+                      <Link to="/detail-product">
+                        <CardMedia
+                          style= {media} 
+                          image={test}
+                          title='h'
+                        />
+                      </Link>
 
                     <CardContent >
                       <Typography variant="body2" color="textSecondary">
                         {this.props.data.description}
                       </Typography>
+                      <Link to="/detail-product" variant="body2">Ver mas</Link>
                     </CardContent>
                     </Card>
       );
